@@ -5,17 +5,24 @@ class Node;
 
 class Channel {
 private:
-    /*
-     * 0 if the channel is idle
-     * 1 if the channel is busy
-     */
+    /* state - represents current channel status
+    * 0 if the channel is idle
+    * 1 if the channel is busy
+    */
     int state;
+
+    /* nodes that use this channel */
     std::vector<Node*> nodes;
 
 public:
-    int GetState(void);
-    void SetState(int _state);
-    std::vector<Node*> GetNodes(void);
+    Channel();
+    int getState(void);
+    void setState(int _state);
+    std::vector<Node*> getNodes(void);
+
+    /* record that node use this channel */
     void add(Node *node);
+
+    /* delete node from nodes */
     bool remove(Node *node);
 };

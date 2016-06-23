@@ -1,16 +1,21 @@
 #include "channel.h"
 
-int Channel::GetState()
+Channel::Channel() : state(0)
+{
+    nodes = std::vector<Node*>();
+}
+
+int Channel::getState()
 {
     return state;
 }
 
-void Channel::SetState(int _state)
+void Channel::setState(int _state)
 {
     state = _state;
 }
 
-std::vector<Node*> Channel::GetNodes(void)
+std::vector<Node*> Channel::getNodes(void)
 {
     return nodes;
 }
