@@ -9,6 +9,6 @@
 ## Output
 * Throughput  
   the mean number of transmitted packets per second.
-* Mean packet delay
+* Mean packet delay  
   the time from a generation time of a packet to the time that the transmission of the packet is completed.
 * Transmission collision probabilty
